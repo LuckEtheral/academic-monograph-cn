@@ -1,0 +1,39 @@
+{
+  "normal.md": {
+    "status": "no_flags",
+    "categories": []
+  },
+  "suspect.md": {
+    "status": "needs_context_review",
+    "required_lines": [
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15
+    ],
+    "categories": [
+      "control",
+      "possible_operator_loss",
+      "function_structure"
+    ]
+  },
+  "control.md": {
+    "status": "no_flags",
+    "categories": []
+  },
+  "missing.md": {
+    "status": "read_failed",
+    "exit_code": 2
+  },
+  "directory": {
+    "status": "read_failed",
+    "exit_code": 2
+  },
+  "link.md": {
+    "status": "read_failed",
+    "exit_code": 2
+  }
+}

@@ -1,92 +1,56 @@
 # 中文研究型专著写作与审核 Skill
 
-名称：`chinese-research-monograph`；版本：`0.3.0`。
-仓库：[LuckEtheral/academic-monograph-cn](https://github.com/LuckEtheral/academic-monograph-cn)。
+**0.4.0 · 本项目选择的默认可用发布版本。** 技能名及调用名保持chinese-research-monograph；稳定版不是学术正确性认证，也不承诺未来输出无误。
 
-帮助以文献、理论模型和研究结果为基础的中文专著建立问题体系，讲清模型与机制，形成跨研究综合认识，并审核已完成书稿。主要面向经济管理、运筹及相近领域。其他学科按其体裁调整，不强加数学模型。
+主要服务中文管理科学与工程研究型专著，重点为博弈分析、契约设计、信息不对称和决策优化；保留全书规划、章节编写、局部修订、跨章统稿及审核。相近领域按其体裁使用，不强加数学模型或新增实证要求。
 
-**写作与审核以中文学术专著规范为主要依据，结合目标出版社要求和作者明确约定。** 英文研究可作为学术来源，英文专著提供组织和讲解方法参考，其论文式章节、摘要或文献编排不能直接成为中文专著的形式标准。论文材料须按中文专著主线和叙述重新组织。详见[中文专著规范](skills/chinese-research-monograph/references/chinese-monograph-conventions.md)。
-
-## 快速开始与资料准备
-
-安装完成且当前环境能调用后，可写：
-
-```text
-使用 $chinese-research-monograph，只审核附件中的第4章，目标读者是经管研究生。
-章稿为当前底本，两篇论文用于核对模型设定。以中文学术专著规范为准，
-检查信息结构、交易时序及结论条件，给有定位的意见；本次不修改书稿。
-```
-
-**文献不是每次都必须上传。** 规划可从主题、读者和问题开始，润色或结构初审可从书稿开始；依据文献写作、核查引证与复算时，需提供对应原文、设定或数据。当前对话附件和可读取的本地路径均可，材料数量服从本次任务。书目、DOI有助于寻找原文，但不能代替已核读正文。
-
-[完整使用指南](docs/usage-guide.md)说明任务需要什么材料、文件怎样准备、如何调用、资料缺失时怎样继续，并提供七种任务示例。使用者不必重新上传维护者用于提炼规则的参考专著，也不必把研究文献或书稿上传到GitHub。
-
-## 写作与审核
-
-|入口|模式|交付|
-|---|---|---|
-|写作|全书规划、整章写作、局部修订、跨章统稿|对应范围的可读成品及必要的独立说明|
-|审核|快速诊断、全书系统审阅、专项核查、修订复审|总体判断、可定位问题清单、检查覆盖与待核事项|
-
-不同章节采用不同组织方式。来源论文按本书问题重组，数学对象、结论条件和新增解释的归属得到保留。专著价值可以来自有依据的综合、比较与深化，不要求每章提出新定理。
-
-审核检查问题体系、解释深度、模型含义、引证支持、案例事实、跨章关系、中文与图表。阅读覆盖、来源核读、计算复核和版面检查分别报告。审核默认保留原稿；明确区分确认错误、待核疑点和表达偏好。
+中文学术专著规范、出版社要求和作者约定优先。英文专著只提供方法和讲解参考，不决定中文书稿体例。正文以本书经营问题和机制组织，不按论文串联；采用模型、结果或数据时，在相关位置准确归属，一篇核心来源也可形成独立可读的专题。
 
 ## 安装与调用
 
-安装目录为 `skills/chinese-research-monograph`。保留其中的入口、显示信息、参考指南和模板。安装方式与可用能力以实际环境为准；安装技能不代表已经具备检索、OCR、计算或Word/PDF渲染能力。
-
-在支持 `$skill-installer` 的环境中可请求：
+固定本版：ref=v0.4.0，path=skills/chinese-research-monograph。见[固定版本安装说明](docs/install-v0.4.0.md)。项目级使用可将完整技能目录放入.agents/skills/chinese-research-monograph/；确认入口metadata.version为0.4.0，不自动覆盖已有同名副本或锁定项目。
 
 ```text
-使用 $skill-installer，从 LuckEtheral/academic-monograph-cn 安装
-skills/chinese-research-monograph。
+使用 $skill-installer，从
+https://github.com/LuckEtheral/academic-monograph-cn/tree/v0.4.0/skills/chinese-research-monograph
+取得固定版本；放入独立项目，不覆盖已有同名技能。
 ```
 
-安装后可显式调用：
-
 ```text
-使用 $chinese-research-monograph，根据提供的计划、来源和前章底本，
-完成本章连续可读的正文。解释关键模型，核查说明独立成文。
+使用 $chinese-research-monograph，按提供的本章问题和来源完成连续中文正文。
+讲清主体、信息、时序、关键推导及成立条件，在相关位置保留引用。
 按约定交付并停止。
 ```
 
-```text
-使用 $chinese-research-monograph，系统审阅提供的完整专著。
-检查全书问题体系、解释深度、跨章关系和关键论断。
-逐章记录覆盖，给出有定位和依据的意见；本次不改书稿。
-```
+## 任务与材料
 
-```text
-使用 $chinese-research-monograph，只复审指定修订项及必要关联内容。
-分别报告已解决、部分解决、未解决和未核事项，不扩展到全书重写。
-```
+|任务|入口与交付|
+|---|---|
+|规划|主题、读者和问题即可启动；目录候选与章节功能|
+|编写/修订|按约定范围交付可读正文，保留公式、条件、事实及来源归属|
+|统稿|核对实际跨章关系，保留不同模型的对象、时序与比较口径|
+|审核/复审|保留原稿，给有定位的依据，区分确认错误、待核疑点和表达偏好|
 
-```text
-使用 $chinese-research-monograph，检查指定小节的模型与引证。
-来源缺失时准确区分待核疑点与确认错误，按实际复核范围报告。
-```
+文献不是每次都必须上传；依据来源写作、核引证或复算时取得对应原件/输入。局部润色和规划不以全文上传为前提。[使用指南](docs/usage-guide.md)保留七种任务示例及资料说明；研究来源、写法参照和格式要求分别识别。私有书稿、文献原件不上传本仓库。
 
-## 可选技能协作
+## 本版有限完善
 
-本技能独立支持核心写作与审核。中文润色、Word/PDF、经济管理图表、独立学术评估、运筹表达和新增文献调研可按需要使用环境中已有技能。
+- 在[交付检查](skills/chinese-research-monograph/references/delivery.md)增加含数学文件的实际落盘/显示核对，配[标准库只读工具与短例](skills/chinese-research-monograph/references/math-text-check.md)。启发式提示不能自动修公式，无告警不等于正确；纯聊天、规划和非数学文字不强制扫描/截图。
+- 在[章节写作](skills/chinese-research-monograph/references/chapter-writing.md)及[文献转化](skills/chinese-research-monograph/references/literature-synthesis.md)精炼问题主线与必要归属，提供[自拟开头改写和归属对照](skills/chinese-research-monograph/references/writing-examples.md#1-论文摘要式介绍转为问题推进)。不禁用作者名，不制造新机制。
+- [自拟交付回归](evals/v0.4-delivery/README.md)测试工具和文件流程；当前[公开验证摘要](evals/v0.4/RESULTS.md)分开记录历史专项、真实任务、交付修复和本次验收。
 
-协作规则见 [skill-collaboration.md](skills/chinese-research-monograph/references/skill-collaboration.md)。不整包复制第三方技能，不自动安装，不要求每次加载全部技能。专著体裁与作者要求控制总体组织。
+## 验证范围
 
-## 内容与模板
+P01—P16专项规则已在Beta底本实施。初轮27项成对任务、54个执行会话，26项持平、1项写作退步；有限修正后W01/L02另4会话复测满足，共58个执行会话，不是58道独立试题。R6/X56另有4个执行、2个独立评阅，任务评价均持平；R6首次字符缺陷在后续交付副本恢复18处，首次输出与评阅保留。
 
-入口按任务选择指南，涵盖中文规范、材料接收、全书架构、章节类型、章节写作、文献转化、模型与来源、中文表达、审核统稿、交付、示例和协作。[来源与核读范围](skills/chinese-research-monograph/references/reading-basis.md)说明研究依据及限制，不替代使用者当前任务的原件。
+未证明整体优于v0.3.0；P16未实际加载的阶段不宣称示例增益。本次通用工具不倒称旧会话已使用。G6真实整章编写对照、宿主自动发现/自动调用及其他显示环境按实际未测登记。具体有限验收及限制见公开摘要。
 
-五个可选模板位于 `assets/templates/`：章节任务说明、专著审阅报告、模型变化、案例用途、数值说明。只有实际需要时使用，已明确的任务不必再次填写，也不要求每次使用全部模板。
+## 资源与历史
 
-[测试任务](evals/cases.md)与[合成材料](evals/fixtures.md)用于实际小任务验证，使用独立编写的教学材料。结构检查、任务试用、全书学术审核各有不同含义；具体执行结果记录在 [验证结果](evals/RESULTS.md)。
+入口按需选读中文规范、材料接收、架构、章节类型、写作、文献转化、模型与来源、中文表达、审核统稿、交付、示例及协作；不要求每次全部加载。五个可选模板保留在assets/templates，研究依据见[来源索引](skills/chinese-research-monograph/references/reading-basis.md)。[协作说明](skills/chinese-research-monograph/references/skill-collaboration.md)保留按需协作，不自动安装第三方技能。
 
-## 本版变化
+不统一章数、字数、图表数量或论文式章结构；不要求每章新定理。来源核读、数学复核、实际运算与视觉检查分别报告，不将未做工作记通过。
 
-相较 0.2.0，将中文规范优先原则写入入口和专题指南，增加完整使用指南、材料接收说明、来源索引，以及模型变化、约束分组、小例子、风险指标、数值比较、案例用途和综合审核的细化方法，补充自拟中文示例与三个轻量模板。
+历史[0.2记录](https://github.com/LuckEtheral/academic-monograph-cn/blob/v0.4.0-beta.1/evals/RESULTS.md)、[0.3记录](https://github.com/LuckEtheral/academic-monograph-cn/blob/v0.4.0-beta.1/evals/v0.3/RESULTS.md)及[Beta摘要](https://github.com/LuckEtheral/academic-monograph-cn/blob/v0.4.0-beta.1/evals/v0.4-beta/RESULTS.md)保持阶段身份；旧Beta标签、Release及附件不覆盖。[变更记录](CHANGELOG.md)仅记录此次有限修改。
 
-[0.2.0历史小任务记录](evals/RESULTS.md)保持原版本身份；[0.3.0验证说明](evals/v0.3/RESULTS.md)分别报告本次结构检查与实际试用。选章核读及小任务试用不构成整本专著写作或审核效果验证，也不报告未实测的提升比例。
-
-不设置统一字数、章节结构、文献数或图数。出版社格式由项目指定。本仓库只托管通用规则与合成测试材料，不包含未发表书稿、论文原件或作者私有资料。
-
-公开托管版本 0.3.0；许可证仍待作者选择。
+许可证沿用仓库尚未选择的实际状态；公开托管不等于已经授予特定开放许可。
