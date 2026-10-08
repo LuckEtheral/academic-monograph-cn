@@ -1,12 +1,12 @@
 # 中文研究型专著 Skill 使用指南
 
-版本：0.4.0-beta.1（试用版/Beta）。Skill 名称：`chinese-research-monograph`；仓库名称：`academic-monograph-cn`。二者用于不同位置：调用时使用 skill 名称。
+版本：0.4.0（本项目默认可用发布版本）。Skill 名称：`chinese-research-monograph`；仓库名称：`academic-monograph-cn`。二者用于不同位置：调用时使用 skill 名称。
 
-## 试用版安装
+## 固定版本安装
 
-从 `LuckEtheral/academic-monograph-cn` 获取时，必须同时指定 `ref=v0.4.0-beta.1` 和 `path=skills/chinese-research-monograph`；默认分支在本次发布时保留0.3.0。可向 `$skill-installer` 明确提供这两个值；避免覆盖已有同名安装。隔离Codex CLI项目可将该tag的技能目录放在 `.agents/skills/chinese-research-monograph/`，只在该项目试用，不改变日常全局副本。[官方技能加载说明](https://learn.chatgpt.com/docs/build-skills)。
+从仓库取得本版时同时指定ref=v0.4.0和path=skills/chinese-research-monograph；可将该tag的完整技能目录放入隔离项目的.agents/skills/chinese-research-monograph/，显式调用后确认metadata.version为0.4.0，不自动替换已有项目或全局副本。
 
-试用版沿用已验证候选的功能条文，验证结论及尚未执行的范围见[公开摘要](../evals/v0.4-beta/RESULTS.md)。
+安装与文件校验见[固定版本说明](https://github.com/LuckEtheral/academic-monograph-cn/blob/v0.4.0/docs/install-v0.4.0.md)，阶段结果见[0.4.0公开摘要](https://github.com/LuckEtheral/academic-monograph-cn/blob/v0.4.0/evals/v0.4/RESULTS.md)。稳定版是本项目选择的默认可用版本，不是学术正确性认证。
 
 ## 先确定这次要做什么
 
@@ -139,3 +139,7 @@
 可按实际需要选择“全书规划—代表性章节试写—章节写作—跨章统稿—系统审核—指定修订复审”的阶段，也可以直接进入已明确的局部任务。各阶段确认底本、输出和停止位置；不要求重新完成前面已经确认的工作。
 
 每阶段的反馈用于修正结构和规范，最终稿的作者审定及出版社决定仍按实际状态记录。
+
+## 含数学文件的交付
+
+含数学文件回读实际落盘表达，在实际提供的显示路径检查关键公式；可按需使用[只读扫描与安全写入](../skills/chinese-research-monograph/references/math-text-check.md)。扫描提示须按上下文处理，无告警不证明数学正确。纯聊天、目录规划或不含数学的局部文字不强制运行检查；只交Markdown不强制新建Word。Word仍检查最终文件页面，未测显示环境如实登记。
