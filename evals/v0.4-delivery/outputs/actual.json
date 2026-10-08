@@ -1,0 +1,137 @@
+{
+  "identity": "self-written delivery/tool regression, not scientific capability evaluation",
+  "utf8_JSON_file_roundtrip": "PASS",
+  "cases": [
+    {
+      "input": "normal.md",
+      "exit_code": 0,
+      "actual": {
+        "path": "normal.md",
+        "status": "no_flags",
+        "findings": []
+      },
+      "input_unchanged": true
+    },
+    {
+      "input": "suspect.md",
+      "exit_code": 0,
+      "actual": {
+        "path": "suspect.md",
+        "status": "needs_context_review",
+        "findings": [
+          {
+            "path": "suspect.md",
+            "line": 3,
+            "column": 4,
+            "fragment": "'\\x08'",
+            "category": "control",
+            "certainty": "needs_context_review",
+            "reason": "数学语境中有可疑控制字符/命令残片；先核对上下文，不自动删除。"
+          },
+          {
+            "path": "suspect.md",
+            "line": 5,
+            "column": 4,
+            "fragment": "'\\x0c'",
+            "category": "control",
+            "certainty": "needs_context_review",
+            "reason": "数学语境中有可疑控制字符/命令残片；先核对上下文，不自动删除。"
+          },
+          {
+            "path": "suspect.md",
+            "line": 7,
+            "column": 5,
+            "fragment": "'\\times'",
+            "category": "control",
+            "certainty": "needs_context_review",
+            "reason": "数学语境中有可疑控制字符/命令残片；先核对上下文，不自动删除。"
+          },
+          {
+            "path": "suspect.md",
+            "line": 9,
+            "column": 4,
+            "fragment": "'\\theta'",
+            "category": "control",
+            "certainty": "needs_context_review",
+            "reason": "数学语境中有可疑控制字符/命令残片；先核对上下文，不自动删除。"
+          },
+          {
+            "path": "suspect.md",
+            "line": 11,
+            "column": 2,
+            "fragment": "'xge y'",
+            "category": "possible_operator_loss",
+            "certainty": "needs_context_review",
+            "reason": "短符号与ge/le粘连，可能缺少比较运算符；也可能是变量名，不能自动替换。"
+          },
+          {
+            "path": "suspect.md",
+            "line": 13,
+            "column": 2,
+            "fragment": "'zin'",
+            "category": "possible_operator_loss",
+            "certainty": "needs_context_review",
+            "reason": "短符号与in及区间括号粘连，可能缺少集合归属符；不能据此自动判错。"
+          },
+          {
+            "path": "suspect.md",
+            "line": 15,
+            "column": 2,
+            "fragment": "'\\\\operatorname{clip}(r,0,1'",
+            "category": "function_structure",
+            "certainty": "needs_context_review",
+            "reason": "函数/分组括号数量不一致；检查跨行范围、区间及特殊定界符，不自动补括号。"
+          }
+        ]
+      },
+      "input_unchanged": true
+    },
+    {
+      "input": "control.md",
+      "exit_code": 0,
+      "actual": {
+        "path": "control.md",
+        "status": "no_flags",
+        "findings": []
+      },
+      "input_unchanged": true
+    },
+    {
+      "input": "missing.md",
+      "exit_code": 2,
+      "actual": {
+        "path": "missing.md",
+        "status": "read_failed",
+        "error": "不是可读取的普通文件（不存在、目录或权限限制）。",
+        "findings": []
+      },
+      "input_unchanged": true
+    },
+    {
+      "input": "directory",
+      "exit_code": 2,
+      "actual": {
+        "path": "directory",
+        "status": "read_failed",
+        "error": "不是可读取的普通文件（不存在、目录或权限限制）。",
+        "findings": []
+      },
+      "input_unchanged": true
+    },
+    {
+      "input": "link.md",
+      "exit_code": 2,
+      "actual": {
+        "path": "link.md",
+        "status": "read_failed",
+        "error": "拒绝直接符号链接文件；请明确提供实际文件。",
+        "findings": []
+      },
+      "input_unchanged": true
+    }
+  ],
+  "normal_code_and_table_tabs_retained": true,
+  "source_fixtures_unchanged": true,
+  "model_sessions": 0,
+  "limit": "finite heuristic examples; no universal LaTeX/renderer coverage claim"
+}
