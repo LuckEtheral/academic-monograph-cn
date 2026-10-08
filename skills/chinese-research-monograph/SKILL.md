@@ -29,6 +29,7 @@ metadata:
 |任务|参考|
 |---|---|
 |章节形式、中文体裁与出版社要求|[中文专著规范](references/chinese-monograph-conventions.md)|
+|符号、名称与图表排印；已选用16开配置|[排印指南](references/typography-and-names.md)、[项目格式配置](references/format-profile-16k.md)|
 |材料准备、可读性、缺项与任务启动|[材料接收](references/materials-and-intake.md)|
 |全书规划、章节空缺与重复|[全书架构](references/book-architecture.md)|
 |导论、方法、专题、综合、展望|[章节类型](references/chapter-types.md)|
