@@ -1,4 +1,4 @@
 interface:
   display_name: "中文研究型专著写作与审核"
-  short_description: "按中文学术专著规范组织问题与模型，支持材料准备、写作及分层审核"
+  short_description: "面向中文管理科学与工程专著，支持博弈、契约及决策模型的规划、写作与审核"
   default_prompt: "使用 $chinese-research-monograph，以中文学术专著规范为准，按提供的材料和范围完成本次写作、审核或修订任务。"
