@@ -1,9 +1,11 @@
 # 中文研究型专著写作与审核 Skill
 
-名称：`chinese-research-monograph`；版本：`0.3.0`。
+**0.4.0-beta.1 · 试用版（GitHub Pre-release）。** 发布时默认分支保留稳定版0.3.0；本试用版来自专项验证后的最终候选，包含有限修正01。技能名称和调用标识不变。
+
+名称：`chinese-research-monograph`；版本：`0.4.0-beta.1`。
 仓库：[LuckEtheral/academic-monograph-cn](https://github.com/LuckEtheral/academic-monograph-cn)。
 
-帮助以文献、理论模型和研究结果为基础的中文专著建立问题体系，讲清模型与机制，形成跨研究综合认识，并审核已完成书稿。主要面向经济管理、运筹及相近领域。其他学科按其体裁调整，不强加数学模型。
+帮助以文献、理论模型和研究结果为基础的中文专著建立问题体系，讲清模型与机制，形成跨研究综合认识，并审核已完成书稿。主要面向中文管理科学与工程研究型专著，重点支持博弈分析、契约设计、信息不对称和决策优化；相近领域按实际问题与体裁使用。规划、编写、修订、统稿与审核均保留。
 
 **写作与审核以中文学术专著规范为主要依据，结合目标出版社要求和作者明确约定。** 英文研究可作为学术来源，英文专著提供组织和讲解方法参考，其论文式章节、摘要或文献编排不能直接成为中文专著的形式标准。论文材料须按中文专著主线和叙述重新组织。详见[中文专著规范](skills/chinese-research-monograph/references/chinese-monograph-conventions.md)。
 
@@ -36,11 +38,14 @@
 
 安装目录为 `skills/chinese-research-monograph`。保留其中的入口、显示信息、参考指南和模板。安装方式与可用能力以实际环境为准；安装技能不代表已经具备检索、OCR、计算或Word/PDF渲染能力。
 
+本Beta需从[tag v0.4.0-beta.1](https://github.com/LuckEtheral/academic-monograph-cn/tree/v0.4.0-beta.1)取得；只写仓库名会获取默认稳定分支。只希望在隔离Codex CLI项目试用时，可把该tag中的技能目录放入项目的 `.agents/skills/chinese-research-monograph/`；适用宿主与加载方式见[官方技能说明](https://learn.chatgpt.com/docs/build-skills)。
+
 在支持 `$skill-installer` 的环境中可请求：
 
 ```text
-使用 $skill-installer，从 LuckEtheral/academic-monograph-cn 安装
-skills/chinese-research-monograph。
+使用 $skill-installer，从 LuckEtheral/academic-monograph-cn 安装试用版，
+必须指定 ref 为 v0.4.0-beta.1，path 为 skills/chinese-research-monograph。
+不要按默认分支安装，不覆盖已有同名安装；已有副本时先选独立试用位置。
 ```
 
 安装后可显式调用：
@@ -79,14 +84,20 @@ skills/chinese-research-monograph。
 
 五个可选模板位于 `assets/templates/`：章节任务说明、专著审阅报告、模型变化、案例用途、数值说明。只有实际需要时使用，已明确的任务不必再次填写，也不要求每次使用全部模板。
 
-[测试任务](evals/cases.md)与[合成材料](evals/fixtures.md)用于实际小任务验证，使用独立编写的教学材料。结构检查、任务试用、全书学术审核各有不同含义；具体执行结果记录在 [验证结果](evals/RESULTS.md)。
+[历史测试任务](https://github.com/LuckEtheral/academic-monograph-cn/blob/v0.4.0-beta.1/evals/cases.md)与[合成材料](https://github.com/LuckEtheral/academic-monograph-cn/blob/v0.4.0-beta.1/evals/fixtures.md)保持原身份；[历史结果](https://github.com/LuckEtheral/academic-monograph-cn/blob/v0.4.0-beta.1/evals/RESULTS.md)不继承成本Beta新测结果。专项验证的实际结果与限制见[Beta公开验证摘要](evals/v0.4-beta/RESULTS.md)。
 
-## 本版变化
+## 发布底本0.3.0的历史变化
 
 相较 0.2.0，将中文规范优先原则写入入口和专题指南，增加完整使用指南、材料接收说明、来源索引，以及模型变化、约束分组、小例子、风险指标、数值比较、案例用途和综合审核的细化方法，补充自拟中文示例与三个轻量模板。
 
-[0.2.0历史小任务记录](evals/RESULTS.md)保持原版本身份；[0.3.0验证说明](evals/v0.3/RESULTS.md)分别报告本次结构检查与实际试用。选章核读及小任务试用不构成整本专著写作或审核效果验证，也不报告未实测的提升比例。
+[0.2.0历史小任务记录](https://github.com/LuckEtheral/academic-monograph-cn/blob/v0.4.0-beta.1/evals/RESULTS.md)保持原版本身份；[0.3.0验证说明](https://github.com/LuckEtheral/academic-monograph-cn/blob/v0.4.0-beta.1/evals/v0.3/RESULTS.md)保留原结构检查与实际试用身份。选章核读及小任务试用不构成整本专著写作或审核效果验证，也不报告未实测的提升比例。
 
 不设置统一字数、章节结构、文献数或图数。出版社格式由项目指定。本仓库只托管通用规则与合成测试材料，不包含未发表书稿、论文原件或作者私有资料。
 
-公开托管版本 0.3.0；许可证仍待作者选择。
+本tag为0.4.0-beta.1试用版；发布时默认稳定分支为0.3.0，未经合并。历史eval保留在仓库，独立技能附件仅含通用技能与必要使用说明。许可证仍待作者选择。
+
+[简短试用安装说明](docs/beta-install.md)提供锁定版本和隔离使用方法。
+
+## 试用版验证范围
+
+初轮27项成对任务中26项持平、W01一项候选写作退步，改善0项；一次有限修正后W01、L02两项开发回归均满足且持平。共58个执行会话，并非58道独立测试或一次全部通过。未证明整体优于0.3.0，P16示例未实际加载。最终修正候选仅直接复测W01和L02；自动发现/自动调用及R6、X56、G6仍未测。完整边界见[公开验证摘要](evals/v0.4-beta/RESULTS.md)。
