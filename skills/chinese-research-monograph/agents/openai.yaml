@@ -1,0 +1,4 @@
+interface:
+  display_name: "中文研究型专著写作"
+  short_description: "按问题链组织中文研究型专著，讲清模型机制并核对来源与跨章关系"
+  default_prompt: "使用 $chinese-research-monograph，依据提供的计划、文献和章稿完成本次专著写作任务。"
