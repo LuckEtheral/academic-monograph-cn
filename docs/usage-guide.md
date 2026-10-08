@@ -8,6 +8,27 @@
 
 安装与文件校验见[固定版本说明](https://github.com/LuckEtheral/academic-monograph-cn/blob/v0.4.0/docs/install-v0.4.0.md)，阶段结果见[0.4.0公开摘要](https://github.com/LuckEtheral/academic-monograph-cn/blob/v0.4.0/evals/v0.4/RESULTS.md)。稳定版是本项目选择的默认可用版本，不是学术正确性认证。
 
+## 推荐配套技能怎样选用
+
+先用本技能确定任务，只有确需专项能力时再选择：[推荐技能及获取链接](../README.md#推荐配套技能可选)。例如，局部中文润色选humanizer-zh，模型专业表达选or-writing-polishing，图表选econ-table-figure-design，Word/PDF选当前环境已有的文档能力；只有新增文献调研或正式委托评阅时再选对应技能。
+
+每项链接指向完整技能目录或项目说明。可以向支持技能安装的环境提出以下请求，替换为推荐表中的实际链接：
+
+```text
+请从 https://github.com/op7418/Humanizer-zh 获取humanizer-zh完整技能，
+先核对宿主支持、依赖及许可，再安装到我指定的独立项目作用域。
+保留已有同名副本；记录取得的commit与实际技能name，确认本项目可调用。
+```
+
+Codex可按[官方技能说明](https://learn.chatgpt.com/docs/build-skills)使用技能；环境已有$skill-installer时可交由其取得明确仓库与目录。其他宿主按各项目说明操作，不能照搬本机插件缓存或假定所有环境都有同一安装能力。公开anti-defensive-writing与此前本机anti-defensive-writing-zephyr名称不同；公开docx是documents的替代入口。调用时使用实际安装的name，不通过改名假装同版。
+
+```text
+使用 $chinese-research-monograph 修订这一节，按需结合已安装的 $humanizer-zh。
+保留模型、公式、事实、成立条件和来源，只处理约定范围的中文表达。
+```
+
+安装和调用分开授权。本技能不会自动安装配套技能，也不要求全部加载。未安装时继续核心工作；缺少专项工具就说明实际未完成的部分。复制取得的版本不会自动跟随上游更新，更新按使用环境和项目决定，不覆盖锁定版本。推荐范围、任务交接和完整要求见[协作说明](../skills/chinese-research-monograph/references/skill-collaboration.md)。
+
 ## 先确定这次要做什么
 
 本 skill 主要服务中文管理科学与工程研究型专著，重点为博弈分析、契约设计、信息不对称和决策优化。支持全书规划、章节写作、局部修订、跨章统稿，以及快速诊断、全书审阅、专项核查和修订复审；相近领域按实际问题和体裁使用。

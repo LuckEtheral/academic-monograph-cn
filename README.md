@@ -28,6 +28,23 @@ https://github.com/LuckEtheral/academic-monograph-cn/tree/v0.4.0/skills/chinese-
 按约定交付并停止。
 ```
 
+## 推荐配套技能（可选）
+
+本技能可以独立完成核心写作与审核。以下能力按任务选用，不打包、不自动安装或更新，也不要求全部安装。点击名称查看公开项目与获取说明；安装前核对完整技能目录、依赖、许可和当前宿主支持。
+
+|技能或能力入口|适合什么任务|获取与版本说明|
+|---|---|---|
+|[humanizer-zh](https://github.com/op7418/Humanizer-zh)|已有中文正文的局部润色|仓库根目录为技能；保留公式、事实、条件和来源|
+|[econ-table-figure-design](https://github.com/juliaError/econ-TopJournal-writing-Skill/tree/main/skills/econ-table-figure-design)|经济管理图表、标签、图注与视觉检查|取得指定子目录；不将论文三线表要求套到指定出版社格式|
+|[or-writing-polishing](https://github.com/raichll/OR-Writing)|运筹模型、算法及结果的专业表达|仓库根目录为技能；不默认采用期刊论文结构|
+|[literature-review-econ-skill](https://github.com/caodoudou99/literature-review-econ-skill/tree/main/literature-review-econ-skill)|确需新增相关文献调研时|取得指定子目录；明确中文输出与调研范围，不扩大任务|
+|[peer-review](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/peer-review)|明确委托的独立学术评估|遵循其授权、保密和评阅要求；普通作者自查优先本技能|
+|[anti-defensive-writing](https://github.com/Kiterlin/anti-defensive-writing/tree/main/skill/anti-defensive-writing)|重复自我辩护、贡献组织与表达力度|公开同类入口，调用名为anti-defensive-writing；不是此前本机anti-defensive-writing-zephyr副本|
+|[docx](https://github.com/anthropics/skills/tree/main/skills/docx)|Word读取、生成与修订|公开替代入口；不是宿主提供的documents同一副本，需核对工具、依赖及许可|
+|[pdf](https://github.com/openai/skills/tree/main/skills/.curated/pdf)|PDF读取、渲染与版面核查|公开可获取版本；与宿主插件副本不保证一致|
+
+宿主已提供documents/pdf时优先确认现有能力，无需重复安装。第三方规则的适用性先按任务检查；中文专著体裁、出版社要求、作者约定和已授权范围保持优先。详细[协作与来源说明](skills/chinese-research-monograph/references/skill-collaboration.md)及[选用和安装示例](docs/usage-guide.md#推荐配套技能怎样选用)列出边界。推荐链接不表示组合效果已经验证。
+
 ## 任务与材料
 
 |任务|入口与交付|
