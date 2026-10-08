@@ -16,6 +16,25 @@
 
 先确认技能在当前环境确实可用并读取其说明。按作者意图、专著体裁和本次范围组织任务，遵循协作技能实际要求；若其完整流程不适合任务，不通过复制片段绕过要求，而选择本技能流程或明确适用的另一能力。
 
+## 获取链接与名称差异
+
+核对日期：2026-10-08。以下是公开来源入口，不包含第三方技能副本。取得完整目录及支持资源，不只复制SKILL.md；按上游说明核对依赖、许可、宿主和实际name，记录所选commit。链接内容可能更新，本项目不自动同步。
+
+|协作名称|公开获取入口|取得范围与说明|
+|---|---|---|
+|humanizer-zh|[Humanizer-zh](https://github.com/op7418/Humanizer-zh)|仓库根目录|
+|econ-table-figure-design|[经济管理图表技能](https://github.com/juliaError/econ-TopJournal-writing-Skill/tree/main/skills/econ-table-figure-design)|skills/econ-table-figure-design完整目录|
+|or-writing-polishing|[OR-Writing](https://github.com/raichll/OR-Writing)|仓库根目录|
+|literature-review-econ-skill|[文献综述技能](https://github.com/caodoudou99/literature-review-econ-skill/tree/main/literature-review-econ-skill)|literature-review-econ-skill完整目录|
+|peer-review|[Scientific Agent Skills](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/peer-review)|skills/peer-review完整目录；项目已从claude-scientific-skills更名|
+|anti-defensive-writing-zephyr|[公开同类技能anti-defensive-writing](https://github.com/Kiterlin/anti-defensive-writing/tree/main/skill/anti-defensive-writing)|不保证与本机zephyr副本一致；公开name为anti-defensive-writing，不冒称zephyr的直接安装源|
+|documents|[公开替代技能docx](https://github.com/anthropics/skills/tree/main/skills/docx)|宿主documents能力不等于该目录；该替代技能name为docx，工具及许可单独核对|
+|pdf|[OpenAI公开PDF技能](https://github.com/openai/skills/tree/main/skills/.curated/pdf)|skills/.curated/pdf完整目录；不保证与宿主插件版本一致|
+
+先检查宿主已提供的documents/pdf能力。缺失时可考虑公开替代，不能声称安装了原插件。仅看到本机同名技能不等于已核实其公开获取源或所有环境可用。名称差异不通过改frontmatter掩盖。
+
+安装可将本表链接交给当前环境支持的技能安装器，明确安装作用域和保留已有副本。用户操作示例见[使用指南](../../../docs/usage-guide.md#推荐配套技能怎样选用)。这些链接说明可获取性，不证明配套技能与本项目的全部组合效果；按当前任务读取其完整要求，不强制加载所有技能或指南。
+
 ## 默认与缺失处理
 
 作者对自己专著自查使用本技能审核模式。peer-review有独立的正式评阅要求，不默认套用到普通作者自查；正式委托时按其适用要求处理。
