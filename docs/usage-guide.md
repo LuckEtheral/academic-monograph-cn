@@ -40,6 +40,14 @@
 
 维护者用来提炼本 skill 规则的参考专著，不需要使用者每次重新上传。参考专著也不能替代本章使用的研究原文。
 
+## 怎样选用具体格式
+
+通用符号、名称与图表要求见[排印指南](../skills/chinese-research-monograph/references/typography-and-names.md)。本仓库另有作者提供的[16开格式配置](../skills/chinese-research-monograph/references/format-profile-16k.md)：包含简介300—400字、三级目录、14×22厘米版心、标题层级、图表与扫描参数。它不是所有专著的默认格式；出版社身份/版本及损坏条款仍须按实际资料确认。
+
+任务可写“沿用已约定的16开规范”或“选用 cn-monograph-16k-author-supplied，按本次Word交付范围执行，损坏条款保持待核”。不必上传所有研究文献才能做格式设置，也不能为了排版重写正文或改动模型。另有出版社文件时直接使用该文件，记录冲突即可。
+
+这两份指南是v0.4.0发布后的仓库补充，旧tag及Release附件不含它们。取得补充时使用包含本次改动的确定commit及skills/chinese-research-monograph路径，记录commit；metadata.version仍为0.4.0，本次不创建新Release、不覆盖旧附件。
+
 ## 文件怎样准备
 
 |材料|推荐提供方式|需要注意什么|

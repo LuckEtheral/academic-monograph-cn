@@ -6,6 +6,12 @@
 
 中文学术专著规范、出版社要求和作者约定优先。英文专著只提供方法和讲解参考，不决定中文书稿体例。正文以本书经营问题和机制组织，不按论文串联；采用模型、结果或数据时，在相关位置准确归属，一篇核心来源也可形成独立可读的专题。
 
+## 仓库格式补充（v0.4.0发布后）
+
+新增[符号、名称与图表排印](skills/chinese-research-monograph/references/typography-and-names.md)，以及可明确选用的[作者16开格式配置](skills/chinese-research-monograph/references/format-profile-16k.md)。通用规则与项目尺寸/字号分开；识别损坏、冲突和旧条款登记为待核，不自动套用到所有专著。
+
+本次只更新仓库，不创建新Release；v0.4.0标签及附件保持原样，尚不含此次补充。需要补充的使用者应选择包含它的确定commit及skills/chinese-research-monograph路径，并记录commit；仅核入口版本号0.4.0不足以区分发布包和后续仓库内容。下方固定tag安装说明仍对应原正式发布。写作、模型和审核主线及历史评测保持不变，不宣称新增写作效果。
+
 ## 安装与调用
 
 固定本版：ref=v0.4.0，path=skills/chinese-research-monograph。见[固定版本安装说明](docs/install-v0.4.0.md)。项目级使用可将完整技能目录放入.agents/skills/chinese-research-monograph/；确认入口metadata.version为0.4.0，不自动覆盖已有同名副本或锁定项目。
